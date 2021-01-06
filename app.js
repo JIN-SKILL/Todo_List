@@ -31,6 +31,7 @@ app.get('/', (req, res) => {
   // get all todo data from db
   Todo.find() // 從資料庫查找出資料
     .lean() // 把資料轉成單純的JS物件
+    .sort({ _id: 'asc' })
     .then(todos => res.render('index', { todos })) // 然後把資料送給前端樣版
     .catch(error => console.log(error)) // 如果發生意外, 執行錯誤處理
 })
