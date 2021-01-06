@@ -4,7 +4,7 @@ const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Todo = require('./models/todo')
 const app = express()
-const port = 3000
+const port = 2900
 
 // add handlebars template
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
@@ -67,10 +67,11 @@ app.get('/todos/:id/edit', (req, res) => {
 
 app.post('/todos/:id/edit', (req, res) => {
   const id = req.params.id
-  const name = req.body.name
+  const { name, isDone } = req.body
   return Todo.findById(id)
     .then(todo => {
       todo.name = name
+      todo.isDone = isDone === 'on'
       return todo.save()
     })
     .then(() => res.redirect(`/todos/${id}`))
