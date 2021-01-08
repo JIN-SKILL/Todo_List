@@ -21,7 +21,6 @@ require('./config/mongoose')
 // setting route
 app.use(routes)
 
-
 // listen
 app.listen(port, () => {
   console.log(`The server is running in http://localhost:${port}`)

@@ -8,7 +8,6 @@
     "dev": "nodemon app.js",
     "seed": "node ./models/seeds/todoSeeder",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "keywords": [],
   "author": "",
