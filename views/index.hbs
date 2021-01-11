@@ -3,9 +3,9 @@
   {{#each todos}}
     <li class="list-group-item">
       <div class="row">
-        <div class="col">
-          <input class="me-1" style="vertical-align: middle;" type="checkbox" name="isDone" {{#if isDone}} checked {{/if}} disabled>
-          <h4 style="display: inline; vertical-align: middle;">{{ this.name }}</h4>
+        <div class="col d-flex align-items-center fs-4">
+          <input class="me-1" type="checkbox" name="isDone" {{#if isDone}} checked {{/if}} disabled>
+          {{ this.name }}
         </div>
         <div class="col d-flex justify-content-end">
           <a class="btn btn-secondary ms-3" href="./todos/{{ this._id }}">detail</a>
