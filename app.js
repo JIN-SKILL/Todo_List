@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const routes = require('./routes')
 const app = express()
-const port = 2900
+const port = 3000
 
 // add handlebars template
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))

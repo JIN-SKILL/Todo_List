@@ -5,5 +5,5 @@ db.once('open', () => {
   for (let i = 1; i <= 10; i++) {
     Todo.create({ name: `name-${i}`})
   }
-  console.log('done.')
+  console.log('Completed seed loading.')
 })

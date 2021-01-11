@@ -8,7 +8,7 @@ db.on('error', () => {
   console.log('mongodb error!')
 })
 db.once('open', () => {
-  console.log('mongodb connected!')
+  console.log('mongoDB connected.')
 })
 
 
