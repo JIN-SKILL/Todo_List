@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const routes = require('./routes')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 // add handlebars template
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
@@ -23,5 +23,5 @@ app.use(routes)
 
 // listen
 app.listen(port, () => {
-  console.log(`The server is running in http://localhost:${port}`)
+  console.log(`The server is running on http://localhost:${port}`)
 })
